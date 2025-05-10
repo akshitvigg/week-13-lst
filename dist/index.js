@@ -15,9 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv").config();
 const express_1 = __importDefault(require("express"));
 const mintTokens_1 = require("./mintTokens");
+const address_1 = require("./address");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-const vault = "badzog4uMZdEJmkAJrzUSbp4Yzvp79ax9b3ozKxmFvc"; // your receiving address
+const vault = address_1.PUBLIC_KEY;
 //@ts-ignore
 app.post("/helius", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;

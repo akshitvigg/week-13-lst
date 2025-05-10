@@ -3,13 +3,13 @@ import express, { Request, Response } from "express";
 import { burnToken, mintTokens, sendNativeToken } from "./mintTokens";
 import bs58 from "bs58";
 import { Keypair } from "@solana/web3.js";
-import { PRIVATE_KEY } from "./address";
+import { PRIVATE_KEY, PUBLIC_KEY } from "./address";
 
 const app = express();
 
 app.use(express.json());
 
-const vault = "badzog4uMZdEJmkAJrzUSbp4Yzvp79ax9b3ozKxmFvc"; // your receiving address
+const vault = PUBLIC_KEY;
 
 //@ts-ignore
 app.post("/helius", async (req: Request, res: Response) => {
